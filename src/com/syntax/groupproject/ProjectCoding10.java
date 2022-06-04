@@ -1,5 +1,7 @@
 package com.syntax.groupproject;
 
+import java.util.Arrays;
+
 public class ProjectCoding10 {
 
 	public static void main(String[] args) {
@@ -16,5 +18,29 @@ public class ProjectCoding10 {
 				}
 		}
 		System.out.println("The second largest number is " + secondLargest);
+		
+		System.out.println("-------------AnotherWay-------");
+		
+		Arrays.sort(nums);// it will sort and print array in right order
+		System.out.println(Arrays.toString(nums)); 
+		System.out.println(nums[0]);
+		System.out.println(nums[nums.length-1]); // last index is always size-1
+		System.out.println(nums[nums.length-2]);
+		
+		System.out.println("-------------Another Way----------");
+		
+		int maxNum=nums[0];
+		secondLargest=nums[0];
+		for (int num:nums) {
+			if(num>maxNum) {
+				secondLargest=maxNum;
+				maxNum=num;				
+			}
+			if(num>secondLargest && secondLargest<maxNum && num<maxNum) {
+				secondLargest=num;
+			}
+		}
+		System.out.println(maxNum);
+		System.out.println(secondLargest);
 	}
 }

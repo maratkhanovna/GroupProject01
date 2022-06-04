@@ -12,6 +12,15 @@ public class ProjectCoding11 {
 					System.out.println("The duplicate element is "+furniture[j]);
 			}
 		}
+		
+		System.out.println("----------Another Way----------");
+		
+		for (int i =0; i<furniture.length; i++) {
+			for (int j=i+1; j<furniture.length; j++) {
+				if (furniture[i].equals(furniture[j]) && j!=i)
+					System.out.println("The duplicate element is "+furniture[i]);
+			}
+		}
 	}
 
 }

@@ -7,21 +7,16 @@ public class ProjectCoding09 {
 
 		int[] nums = { 238, 544, 255, 688, 422, 549, -422, 156 };
 
-		int maxNum;
-		int minNum;
+		int maxNum=nums[0];
+		int minNum=nums[1];
 
-		if (nums[0] > nums[1]) {
-			maxNum = nums[0];
-			minNum = nums[1];
-		} else {
-			maxNum = nums[1];
-			minNum = nums[0];
-		}
-		for (int i = 2; i < nums.length; i++) {
-			if (nums[i] > maxNum) {
-				maxNum = nums[i];
-			} else if (nums[i] < minNum) {
-				minNum = nums[i];
+		
+		for (int num:nums) {
+			if (num > maxNum) {
+				maxNum = num;
+			}
+			if (num<minNum) {
+				minNum=num;
 			}
 
 		}
